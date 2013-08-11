@@ -9,11 +9,7 @@ public class Problem13 {
   public static void main(String[] args) {
           
     Problem13 test = new Problem13();
-    System.out.println("Given a mass of " + test.m + "kg and path coordinates:");
-    System.out.println(Arrays.deepToString(test.pathCoords.toArray()));
-    System.out.print("The battery capacity must be at least ");
-    System.out.print(test.roboBattery());
-    System.out.println(" Joules to complete this path.");
+    test.printResult();
   }
   
   public Problem13() {
@@ -69,6 +65,14 @@ public class Problem13 {
   
   public void useSampleMass() {
     m = 5.589;
+  }
+  
+  public void printResult() {
+    System.out.println("Given a mass of " + m + "kg and path coordinates:");
+    System.out.println(Arrays.deepToString(pathCoords.toArray()));
+    System.out.print("The battery capacity must be at least ");
+    System.out.print(roboBattery());
+    System.out.println(" Joules to complete this path.");
   }
   
 }
